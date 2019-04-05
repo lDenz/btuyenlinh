@@ -1,8 +1,8 @@
 <template>
 <div class="m-widget">
 	<v-chart :options="data"  :style="{width: data.customWidth, height:data.customHeight}" />
-	<div class="q-title text-center" v-if="data.customTitle">
-		{{data.customTitle}}
+	<div class="q-title text-center" :class="data.customTitle ? '': 'text-light'">
+		{{data.customTitle || 'No title'}}
 		<q-popup-edit v-model="data.customTitle" title="Edit name chart" buttons v-if="hasEdit">
     	<q-input type="text" v-model="data.customTitle" />
   	</q-popup-edit>
@@ -19,7 +19,8 @@ export default {
 	props: ['data', 'hasEdit'],
 	components: {
   	'v-chart': ECharts
-  },
+  }
+
 }
 //:init-options="{renderer:'svg'}"
 </script>

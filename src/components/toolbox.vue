@@ -31,6 +31,7 @@ export default {
   		pie: {
   			customWidth: '100%',
   			customHeight: '150px',
+  			customTitle: ' ',
         series : [{
             name: 'BBBBB', type: 'pie', radius: '60%',
             data:[
@@ -45,6 +46,7 @@ export default {
       bar: {
       	customWidth: '100%',
   			customHeight: '150px',
+  			customTitle: ' ',
       	grid: { height: 100, bottom:30 },
       	xAxis: {
         	type: 'category',
