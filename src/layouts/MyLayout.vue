@@ -6,7 +6,7 @@
         :glossy="$q.theme === 'mat'"
         :inverted="$q.theme === 'ios'"
       >
-        <q-btn
+       <!--  <q-btn
           flat
           dense
           round
@@ -14,8 +14,7 @@
           aria-label="Menu"
         >
           <q-icon name="menu" />
-        </q-btn>
-
+        </q-btn> -->
         <q-toolbar-title>
           Quasar App
           <div slot="subtitle">Running on Quasar v{{ $q.version }}</div>
@@ -23,7 +22,7 @@
       </q-toolbar>
     </q-layout-header>
 
-    <q-layout-drawer
+    <!-- <q-layout-drawer
       v-model="leftDrawerOpen"
       :content-class="$q.theme === 'mat' ? 'bg-grey-2' : null"
     >
@@ -37,7 +36,7 @@
           <q-item-side icon="dashboard" />
           <q-item-main label="Dashboard" sublabel="Demo Dashboard" />
         </q-item>
-        <!-- <q-item @click.native="openURL('https://github.com/quasarframework/')">
+        <q-item @click.native="openURL('https://github.com/quasarframework/')">
           <q-item-side icon="code" />
           <q-item-main label="GitHub" sublabel="github.com/quasarframework" />
         </q-item>
@@ -52,9 +51,9 @@
         <q-item @click.native="openURL('https://twitter.com/quasarframework')">
           <q-item-side icon="rss feed" />
           <q-item-main label="Twitter" sublabel="@quasarframework" />
-        </q-item> -->
+        </q-item>
       </q-list>
-    </q-layout-drawer>
+    </q-layout-drawer> -->
 
     <q-page-container>
       <router-view />

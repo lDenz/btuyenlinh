@@ -103,10 +103,12 @@ export default {
   },
   methods: {
   	addChart(type) {
+  		this.layoutLoaded = false
   		let newChart = (type == 'pie') ? mockupPie : mockupBar
   		newChart.customTitle = 'New Chart'
   		let item = {"x":0,"y":0,"w":4,"h":4, "i":this.mockupLayout.length+"", "chart": newChart}
   		this.mockupLayout.push(item)
+  		setTimeout(() => this.layoutLoaded=true, 100 )
   	},
   }
 }
