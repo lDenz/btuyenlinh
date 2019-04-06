@@ -32,7 +32,7 @@
   				:h="4"
   				:i="item.i"
   			>
-  				<chart :data="item.chart" :hasEdit="editMode" v-if="layoutLoaded"></chart>
+  				<chart :data="item.chart" :index="item.i" :hasEdit="editMode" v-if="layoutLoaded"></chart>
   			</grid-item>
   		
   		</grid-layout>
@@ -100,6 +100,10 @@ export default {
   },
   created () {
   	this.$root.$on('addChart', (type) => this.addChart(type) )
+    this.$root.$on('changeTitle', (name,i) => {
+      let index = this.mockupLayout.findIndex(x => x.i == i )
+      this.mockupLayout[index].chart.customTitle = name
+    })
   },
   methods: {
   	addChart(type) {
