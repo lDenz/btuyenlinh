@@ -1,12 +1,7 @@
 <template>
 <div class="m-widget">
 	<v-chart :options="data"  :style="{width: data.customWidth, height:data.customHeight}" />
-	<div class="q-title text-center" :class="data.customTitle ? '': 'text-light'">
-		{{data.customTitle || 'No title'}}
-		<q-popup-edit v-model="data.customTitle" title="Edit name chart" buttons v-if="hasEdit">
-    	<q-input type="text" v-model="data.customTitle" />
-  	</q-popup-edit>
-	</div>
+	<property-inspector :title="data.customTitle" :index="index" :hasEdit="hasEdit"></property-inspector>
 	
 </div>
 </template>
@@ -15,17 +10,21 @@
 import ECharts from 'vue-echarts'
 import 'echarts/lib/chart/bar'
 import 'echarts/lib/chart/pie'
+import PropertyInspector from './property-inspector'
 export default {
-	props: ['data', 'hasEdit'],
+	props: ['data', 'hasEdit', 'index'],
 	components: {
-  	'v-chart': ECharts
+  	'v-chart': ECharts,
+  	PropertyInspector
+  },
+  created () {
+  	this.$on('changeTitle', (name) => {
+
+  	})
   }
 
 }
-//:init-options="{renderer:'svg'}"
 </script>
 
 <style>
-.echarts { width:100%; height:100%; }
-.m-widget--title { cursor:default; }
 </style>

@@ -60,15 +60,9 @@ export default {
         animationDuration: 1000
       },
   	}
-  },
-  methods: {
-  	test () {
-  		console.log('abcd')
-  	}
   }
 }
 </script>
 
 <style>
-.m-widget--title { cursor:default; }
 </style>
