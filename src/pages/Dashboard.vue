@@ -109,7 +109,7 @@ export default {
 			this.gridLoaded = false
 			let newChart = (type == 'pie') ? samplePie : sampleBar
 			newChart.customTitle = 'New Chart'
-			let item = {"x":0,"y":0, "i":this.gridItems.length+"", "chart": newChart}
+			let item = {"x":0,"y":0, "w":4,"h":4, "i":this.gridItems.length+"", "chart": newChart}
 			this.gridItems.push(item)
 		},
 	}
