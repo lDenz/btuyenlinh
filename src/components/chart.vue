@@ -1,9 +1,8 @@
 <template>
-<div class="m-widget">
-	<v-chart :options="data"  :style="{width: data.customWidth, height:data.customHeight}" />
-	<property-inspector :title="data.customTitle" :index="index" :hasEdit="hasEdit"></property-inspector>
-	
-</div>
+	<div class="m-widget">
+		<e-charts :options="data" :autoresize="true" :style="{width: data.customWidth, height:data.customHeight}" />
+		<property-inspector :title="data.customTitle" :index="index" :hasEdit="hasEdit"></property-inspector>
+	</div>
 </template>
 
 <script>
@@ -14,15 +13,9 @@ import PropertyInspector from './property-inspector'
 export default {
 	props: ['data', 'hasEdit', 'index'],
 	components: {
-  	'v-chart': ECharts,
-  	PropertyInspector
-  },
-  created () {
-  	this.$on('changeTitle', (name) => {
-
-  	})
-  }
-
+		ECharts,
+		PropertyInspector
+	}
 }
 </script>
 
