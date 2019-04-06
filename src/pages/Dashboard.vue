@@ -85,15 +85,15 @@ export default {
 			mode: false,
 			gridLoaded: false,
 			gridItems: [
-				{"x":0,"y":0,"i":"0", "chart": samplePie},
-				{"x":4,"y":0,"i":"1", "chart": sampleBar},
-				{"x":8,"y":0,"i":"2", "chart": samplePie },
-				{"x":0,"y":4,"i":"3", "chart": sampleBar },
-				{"x":4,"y":4,"i":"4", "chart": sampleBar },
-				{"x":8,"y":4,"i":"5", "chart": samplePie },
-				{"x":0,"y":8,"i":"6", "chart": sampleBar },
-				{"x":4,"y":8,"i":"7", "chart": samplePie },
-				{"x":8,"y":8, "i":"8", "chart": samplePie }
+				{"x":0,"y":0,"w":4,"h":4,"i":"0", "chart": sampleBar},
+		    {"x":4,"y":0,"w":4,"h":4,"i":"1", "chart": samplePie},
+		    {"x":8,"y":0,"w":4,"h":4,"i":"2", "chart": sampleBar },
+		    {"x":0,"y":4,"w":4,"h":4,"i":"3", "chart": sampleBar },
+		    {"x":4,"y":4,"w":4,"h":4,"i":"4", "chart": samplePie },
+		    {"x":8,"y":4,"w":4,"h":4,"i":"5", "chart": sampleBar },
+		    {"x":0,"y":8,"w":4,"h":4,"i":"6", "chart": samplePie },
+		    {"x":4,"y":8,"w":4,"h":4,"i":"7", "chart": sampleBar },
+		    {"x":8,"y":8,"w":4,"h":4, "i":"8", "chart": samplePie }
 			],
 		}
 	},
