@@ -2,7 +2,7 @@
   "name": "task1",
   "version": "0.0.1",
   "description": "A Quasar Framework app",
-  "productName": "Task 1",
+  "productName": "Charts Dashboard",
   "cordovaId": "org.cordova.quasar.app",
   "author": "",
   "private": true,
