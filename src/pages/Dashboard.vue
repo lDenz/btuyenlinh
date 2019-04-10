@@ -18,9 +18,8 @@
 				:row-height="55"
 				:is-resizable="false"
 				:responsive="true"
-				:cols="{ lg: 12, md: 12, sm: 8,  xxs: 4 }"
+				:cols="{ lg: 12, md: 12, sm: 8,  xs:4, xxs: 2 }"
 				:margin="[30,30]"
-				@layout-ready="gridLoaded = true"
 				ref="gridLayout"
 			>
 				<grid-item v-for="item in gridItems"
@@ -83,7 +82,6 @@ export default {
 	data () {
 		return {
 			mode: false,
-			gridLoaded: false,
 			gridItems: [
 				{"x":0,"y":0,"w":4,"h":4,"i":"0", "chart": sampleBar},
 		    {"x":4,"y":0,"w":4,"h":4,"i":"1", "chart": samplePie},
@@ -106,7 +104,6 @@ export default {
 	},
 	methods: {
 		addChart(type) {
-			this.gridLoaded = false
 			let newChart = (type == 'pie') ? samplePie : sampleBar
 			newChart.customTitle = 'New Chart'
 			let item = {"x":0,"y":0, "w":4,"h":4, "i":this.gridItems.length+"", "chart": newChart}
