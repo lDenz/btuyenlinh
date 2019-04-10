@@ -19,6 +19,7 @@ module.exports = function (ctx) {
     build: {
       scopeHoisting: true,
       vueRouterMode: 'history',
+      publicPath: 'vue-dashboard'
       // vueCompiler: true,
       // gzip: true,
       // analyze: true,
